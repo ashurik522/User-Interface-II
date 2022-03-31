@@ -52,6 +52,7 @@ body{
     line-height: 1.5; /* line height you never give a unit of measurment. It takes the fontsize and it multiplies it to add space between lines */
     color: #4f4f4f;
     font-family: 'Abel', sans-serif;
+    max-width: 100%;
 }
 h1, h2, h3{
     font-family: 'Mali', cursive;;
@@ -69,21 +70,31 @@ h3{
     font-size: 1.5rem;
 }
 
-
+header{
+    width: 100%;
+    border: 3px solid red;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+}
 header nav{
     display: flex;
     justify-content: space-between;
+    text-align: center;
     width: 50%;
-    z-index: 999;
-    background-color: rgba(255, 255, 255, 0.8);
-    margin-left: 8%;
-    
+    border: 3px solid blue;
+    align-items: center;
+}
+header div{
+    display: flex;
+    justify-content: left;
+    width: 100%;
 }
 button{
     background-color: cadetblue;
     border: black solid 2px;
     font-family: 'Abel', sans-serif;
-    padding: 8px 30px;
     border-radius: 12%;
     font-size: 1.5rem;
 }
@@ -108,10 +119,10 @@ button{
  .projects{
      display: flex;
      justify-content: space-evenly;
-     flex-direction: row;
      padding: 20px;
      margin-top: 15vh;
      text-align: center;
+     width: 100%;
 
  }
  .projects2{
@@ -120,6 +131,7 @@ button{
     flex-direction: row;
     padding: 20px;
     text-align: center;
+    width: 100%;
 }
  footer{
      display: flex;
@@ -128,7 +140,99 @@ button{
      text-align: center;
  }
 
- .i{
+@media(max-width:800px){
+    header{
+        align-items: center;
+        justify-content: center;
+        
+    } 
+    header div{
+        justify-content: center;
+    }
 
+    header nav{
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+     }
+
+    header button{
+        margin-top: 1%;
+    }
+
+    .top{
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .top .profilepic{
+        padding: 20%;
+    }
+
+    .projects{
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        width: 65vh;
+    }
+
+    .projects2{
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        width: 65vh;
+    }
  }
+
+ @media(max-width:500px){
+    header{
+        align-items: center;
+        justify-content: center;
+        
+    } 
+    header div{
+        justify-content: center;
+    }
+
+    header nav{
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+     }
+
+    header button{
+        margin-top: 1%;
+    }
+
+    .top{
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .top .profilepic{
+        padding: 20%;
+    }
+
+    .projects{
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        width: 65vh;
+    }
+
+    .projects2{
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        width: 65vh;
+    }
+ }
+ 
+   
 
